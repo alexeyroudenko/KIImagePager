@@ -42,6 +42,7 @@
 @property (nonatomic, retain) UIPageControl *pageControl;
 @property (nonatomic, assign) NSUInteger currentPage;
 @property (nonatomic, assign) BOOL indicatorDisabled;
+@property (nonatomic, assign) BOOL hidePageControl;
 @property (nonatomic, assign) BOOL hidePageControlForSinglePages; // Defaults YES
 
 // Slideshow

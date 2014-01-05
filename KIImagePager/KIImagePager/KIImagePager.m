@@ -235,7 +235,10 @@
         [_pageControl removeFromSuperview];
         [_indicatorBackground removeFromSuperview];
     } else {
-        [self addSubview:_pageControl];
+        if (!self.hidePageControl)
+        {
+            [self addSubview:_pageControl];
+        }
         [self addSubview:_indicatorBackground];
     }
     
@@ -249,7 +252,10 @@
     _pageControl = [[UIPageControl alloc] initWithFrame:pageControlFrame];
     _pageControl.center = CGPointMake(_scrollView.frame.size.width/2, _scrollView.frame.size.height - 12);
     _pageControl.userInteractionEnabled = NO;
-    [self addSubview:_pageControl];
+    if (!self.hidePageControl)
+    {
+        [self addSubview:_pageControl];
+    }
 }
 
 #pragma mark - ScrollView Delegate;

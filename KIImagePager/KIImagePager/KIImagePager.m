@@ -200,6 +200,9 @@
                         }
                     });
                 });
+            } else if ([[aImageUrls objectAtIndex:i] isKindOfClass:[UIView class]]) {
+                // May be video or other view
+                [imageView addSubview:[aImageUrls objectAtIndex:i]];
             }
             
             // Add GestureRecognizer to ImageView
